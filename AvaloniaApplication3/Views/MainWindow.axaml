@@ -48,7 +48,7 @@
 					<Button HorizontalAlignment="Stretch" Classes.active="{Binding MacrosPageIsActive}" Command="{Binding GotoMacrosCommand}">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Macros" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+							<Label Classes="font" Content="Macr32os" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 
 						</StackPanel>
 					</Button>

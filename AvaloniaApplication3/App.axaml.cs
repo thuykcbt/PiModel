@@ -2,11 +2,12 @@ using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Metadata;
 using AvaloniaApplication3.Data;
 using AvaloniaApplication3.Factories;
 using AvaloniaApplication3.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-
+[assembly: XmlnsDefinition("https://github.com/avaloniaui", "AvaloniaApplication3.Controls")]
 namespace AvaloniaApplication3
 {
     public partial class App : Application

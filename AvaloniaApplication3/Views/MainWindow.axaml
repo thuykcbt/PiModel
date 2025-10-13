@@ -23,49 +23,24 @@
 				<StackPanel Grid.Row="0" Spacing="5">
 					<Image PointerPressed="InputElement_OnPointerPressed" Width="150"     Margin="0,-20,0,0" Source="{Binding SideMenuImage}" IsVisible="{Binding Path=SideMenuExpanded}"></Image>
 					<Image PointerPressed="InputElement_OnPointerPressed" Width="50"     Margin="0,-20,0,0" Source="{Binding SideMenuImage}" IsVisible="{Binding Path=!SideMenuExpanded}"></Image>
-					
-					<Button   HorizontalAlignment="Stretch" Classes.active="{Binding HomePageIsActive}" Command="{Binding GotoHomeCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Home11" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-						</StackPanel>
-					</Button>
-
-					<Button HorizontalAlignment="Stretch" Classes.active="{Binding ProcessPageIsActive}"  Command="{Binding GotoProcessCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Process" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-
-						</StackPanel>
-					</Button>
-					<Button HorizontalAlignment="Stretch"  Classes.active="{Binding ActionPageIsActive}" Command="{Binding GotoActionCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Action" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-
-						</StackPanel>
-					</Button>
-					<Button HorizontalAlignment="Stretch" Classes.active="{Binding MacrosPageIsActive}" Command="{Binding GotoMacrosCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Macros" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-
-						</StackPanel>
-					</Button>
-					<Button HorizontalAlignment="Stretch" Classes.active="{Binding ReporterPageIsActive}" Command="{Binding GotoReporterCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="Reporter" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-
-						</StackPanel>
-					</Button>
-					<Button HorizontalAlignment="Stretch" Classes.active="{Binding HistoryPageIsActive}" Command="{Binding GotoHistoryCommand}">
-						<StackPanel Orientation="Horizontal">
-							<Label Classes="icon"  Content=""></Label>
-							<Label Classes="font" Content="History" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
-
-						</StackPanel>
-					</Button>
+					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding HomePageIsActive}" Command="{Binding GotoHomeCommand}">
+						<Label Classes="font" Content="Home11" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
+					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ProcessPageIsActive}"  Command="{Binding GotoProcessCommand}">
+						<Label Classes="font" Content="Process" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
+					<iconButton IconText="" HorizontalAlignment="Stretch"  Classes.active="{Binding ActionPageIsActive}" Command="{Binding GotoActionCommand}">
+						<Label Classes="font" Content="Action" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
+					<iconButton IconText=""  HorizontalAlignment="Stretch" Classes.active="{Binding MacrosPageIsActive}" Command="{Binding GotoMacrosCommand}">
+						<Label Classes="font" Content="Macros" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
+					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ReporterPageIsActive}" Command="{Binding GotoReporterCommand}">
+						<Label Classes="font" Content="Reporter" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
+					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding HistoryPageIsActive}" Command="{Binding GotoHistoryCommand}">
+						<Label Classes="font" Content="History" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
+					</iconButton>
 					
 				</StackPanel>
 				<Button Grid.Row="1"

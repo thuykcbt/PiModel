@@ -10,6 +10,38 @@
   </PropertyGroup>
   <ItemGroup>
 	  <AvaloniaResource Include="Assets\Images\**" />
+	  <None Remove="Assets\Font\Nunito-ExtraBoldItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-ExtraBoldItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-ExtraBold.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-ExtraBold.ttf" />
+	  <None Remove="Assets\Font\Nunito-BoldItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-BoldItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Bold.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Bold.ttf" />
+	  <None Remove="Assets\Font\Nunito-BlackItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-BlackItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Black.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Black.ttf" />
+	  <None Remove="Assets\Font\Nunito-ExtraLight.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-ExtraLight.ttf" />
+	  <None Remove="Assets\Font\Nunito-ExtraLightItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-ExtraLightItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Italic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Italic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Light.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Light.ttf" />
+	  <None Remove="Assets\Font\Nunito-LightItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-LightItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Medium.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Medium.ttf" />
+	  <None Remove="Assets\Font\Nunito-MediumItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-MediumItalic.ttf" />
+	  <None Remove="Assets\Font\Nunito-Regular.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-Regular.ttf" />
+	  <None Remove="Assets\Font\Nunito-SemiBold.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-SemiBold.ttf" />
+	  <None Remove="Assets\Font\Nunito-SemiBoldItalic.ttf" />
+	  <AvaloniaResource Include="Assets\Font\Nunito-SemiBoldItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Font\house-line-duotone.svg" />

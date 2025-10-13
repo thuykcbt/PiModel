@@ -43,6 +43,7 @@
 		<FontFamily x:Key="PhosphorFill">/Assets/Font/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
 		<FontFamily x:Key="PhosphorLight">/Assets/Font/Phosphor-Light.ttf#Phosphor-Light</FontFamily>
 		<FontFamily x:Key="PhosphorThin">/Assets/Font/Phosphor-Thin.ttf#Phosphor-Thin</FontFamily>
+		<FontFamily x:Key="Nunito">/Assets/Font#Nunito</FontFamily>	
 	</Application.Resources>
    
 	

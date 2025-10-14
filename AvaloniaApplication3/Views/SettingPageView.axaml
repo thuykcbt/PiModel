@@ -25,33 +25,33 @@
           </StackPanel>
       </Grid>
       <!-- Left side Content -->
-      <StackPanel Grid.Row="1" Grid.Column="0" Spacing="15" Margin="15" >
+      <StackPanel Grid.Row="1" Grid.Column="0" Spacing="10" Margin="10" >
           <!-- General -->
           <StackPanel>
-              <Label Content="General"></Label>
-              <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto">
+              <Label Classes="h2" Content="General"></Label>
+              <Grid ColumnDefinitions="*,16,Auto" RowDefinitions="Auto,30,Auto,10,Auto" >
                   
                   <!-- Release License -->
-                  <TextBlock  TextWrapping="Wrap" Text="Remove license of BatchProcess from this machine and release the license back to the server ready to be transferred to another machine."></TextBlock>
-                  <iconButton IconText="" Content="Release License" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"/>
+                  <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  TextWrapping="Wrap" Text="Remove license of BatchProcess from this machine and release the license back to the server ready to be transferred to another machine."></TextBlock>
+                  <iconButton IconText="" Content="Release License" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch"/>
                   
                   <!-- Skip files -->
-                  <TextBlock Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Skip file if only open,Save (Optional) and Close are valid actions."></TextBlock>
-                  <CheckBox Grid.Column="1" Grid.Row="1"></CheckBox>
+                  <TextBlock Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Skip file if only open,Save (Optional) and Close are valid actions."></TextBlock>
+                  <CheckBox Grid.Column="2" Grid.Row="2" Margin="10"></CheckBox>
                   <!-- Skip next files -->
-                  <TextBlock Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Allow duplicate entries of the same file in  project list"></TextBlock>
-                  <CheckBox Grid.Column="1" Grid.Row="2"></CheckBox>
+                  <TextBlock Grid.Row="4" Grid.Column="0" TextWrapping="Wrap" Text="Allow duplicate entries of the same file in  project list"></TextBlock>
+                  <CheckBox Grid.Column="2" Grid.Row="4" Margin="10"></CheckBox>
               </Grid>
           </StackPanel>
           <!-- Locations -->
           <StackPanel>
-              <Label Content="Locations"></Label>
-              <Grid ColumnDefinitions="*,Auto" ShowGridLines="True">
+              <Label Classes="h2" Content="Locations"></Label>
+              <Grid ColumnDefinitions="*,Auto" >
                   <StackPanel>
                       <TextBlock TextWrapping="Wrap" Text="Add or remove the locations to search for Reporter Templates,Macros,Actions and other custom files or templates."></TextBlock>
                       <TextBlock TextWrapping="Wrap" Text="* Add sub-directories will be searched automatically"></TextBlock>
                   </StackPanel>
-                  <iconButton Grid.Row="0" IconText="" Content="Folder" Grid.Column="1" HorizontalAlignment="Stretch"/>
+                  <iconButton Grid.Row="0" Classes="small" IconText="" Content="Folder" Grid.Column="1" HorizontalAlignment="Stretch"/>
                     
               </Grid>   
               <ItemsControl ItemsSource="{Binding LocationsPaths}">
@@ -66,7 +66,7 @@
       <StackPanel Grid.Row="1" Grid.Column="1" Spacing="15" Margin="15">
           <!-- Solidworks Host -->
           <StackPanel>
-              <Label Content="SolidWorks Host" xml:space="preserve"></Label>
+              <Label Classes="h2" Content="SolidWorks Host" xml:space="preserve"></Label>
               <TextBlock TextWrapping="Wrap">BatchProcess can work locally on the current machine,or on any machine accessible over the network or even internet.
                   <LineBreak></LineBreak>
                   Enter the machine IP address,network name or localhost for this machine</TextBlock>
@@ -76,7 +76,7 @@
           </StackPanel>
           <!-- PDM Enterprise -->
             <StackPanel>
-                <Label Content="PDM Enterprise"></Label> 
+                <Label Classes="h2" Content="PDM Enterprise"></Label> 
                 <TextBlock TextWrapping="Wrap" Text="if you are using PDM Enterprise enter the credentials below and test login. BatchProcess can the automatically hanle checking in and out files from PDM Enterprise."></TextBlock>
                 <Grid ColumnDefinitions="*,*,*">
                     <ComboBox Grid.Column="0" HorizontalAlignment="Stretch"></ComboBox>
@@ -90,10 +90,10 @@
                             <Label Classes="font" Content="Login" ></Label>
                         </StackPanel>
                     </Button>
-                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                    <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Classes="outline">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon"  Content=""></Label>
-                            <Label Classes="font" Content="Refresh Valut" ></Label>
+                            <Label  Content="Refresh Value" ></Label>
                         </StackPanel>
                     </Button>
                 </StackPanel>

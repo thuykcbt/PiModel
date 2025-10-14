@@ -18,35 +18,32 @@
 		
 <ContentControl Grid.Column="1" Content="{Binding  CurrentPage}"></ContentControl>		
 		
-		<Border Grid.Column="0"   Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}">
+		<Border Grid.Column="0"   Padding="5" Background="{DynamicResource PrimaryBackgroundGradient}">
 			<Grid RowDefinitions="*,Auto">
-				<StackPanel Grid.Row="0" Spacing="5">
+				<StackPanel Grid.Row="0" Spacing="10">
 					<Image PointerPressed="InputElement_OnPointerPressed" Width="150"     Margin="0,-20,0,0" Source="{Binding SideMenuImage}" IsVisible="{Binding Path=SideMenuExpanded}"></Image>
 					<Image PointerPressed="InputElement_OnPointerPressed" Width="50"     Margin="0,-20,0,0" Source="{Binding SideMenuImage}" IsVisible="{Binding Path=!SideMenuExpanded}"></Image>
-					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding HomePageIsActive}" Command="{Binding GotoHomeCommand}">
+					<iconButton Classes="subtle" IconText="" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Classes.active="{Binding HomePageIsActive}" Command="{Binding GotoHomeCommand}">
 						<Label  Content="Home11" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
-					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ProcessPageIsActive}"  Command="{Binding GotoProcessCommand}">
+					<iconButton Classes="subtle" IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ProcessPageIsActive}"  Command="{Binding GotoProcessCommand}">
 						<Label Content="Process" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
-					<iconButton IconText="" HorizontalAlignment="Stretch"  Classes.active="{Binding ActionPageIsActive}" Command="{Binding GotoActionCommand}">
+					<iconButton Classes="subtle" IconText="" HorizontalAlignment="Stretch"  Classes.active="{Binding ActionPageIsActive}" Command="{Binding GotoActionCommand}">
 						<Label Content="Action" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
-					<iconButton IconText=""  HorizontalAlignment="Stretch" Classes.active="{Binding MacrosPageIsActive}" Command="{Binding GotoMacrosCommand}">
+					<iconButton Classes="subtle" IconText=""  HorizontalAlignment="Stretch" Classes.active="{Binding MacrosPageIsActive}" Command="{Binding GotoMacrosCommand}">
 						<Label Content="Macros" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
-					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ReporterPageIsActive}" Command="{Binding GotoReporterCommand}">
+					<iconButton Classes="subtle" IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding ReporterPageIsActive}" Command="{Binding GotoReporterCommand}">
 						<Label Content="Reporter" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
-					<iconButton IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding HistoryPageIsActive}" Command="{Binding GotoHistoryCommand}">
+					<iconButton Classes="subtle" IconText="" HorizontalAlignment="Stretch" Classes.active="{Binding HistoryPageIsActive}" Command="{Binding GotoHistoryCommand}">
 						<Label  Content="History" IsVisible="{Binding Path=SideMenuExpanded}"></Label>
 					</iconButton>
 					
 				</StackPanel>
-				<Button Grid.Row="1"
-					  HorizontalAlignment="Left"
-					  Classes.active="{Binding SettingPageIsActive}"  Command="{Binding GotoSettingCommand}"
-				>
+				<Button Grid.Row="1" Classes="subtle" HorizontalAlignment="Left" Classes.active="{Binding SettingPageIsActive}"  Command="{Binding GotoSettingCommand}"	>
 					<Border Classes="icon-only"
                            >
 						<Label Classes="icon-only" Content="" />

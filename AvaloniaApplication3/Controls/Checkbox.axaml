@@ -1,0 +1,220 @@
+﻿
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:ClassModifier="internal">
+  <Design.PreviewWith>
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}" Width="420">
+      <Grid ColumnDefinitions="*,*">
+        <StackPanel Spacing="20">
+          <CheckBox></CheckBox>
+          <CheckBox IsChecked="True"></CheckBox>
+          <CheckBox>Unchecked</CheckBox>
+          <CheckBox IsChecked="True">Checked</CheckBox>
+          <CheckBox IsThreeState="True" IsChecked="{x:Null}">Indeterminate</CheckBox>
+          <CheckBox Width="120">Checkbox should wrap its text</CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Spacing="20">
+          <CheckBox IsEnabled="False"></CheckBox>
+          <CheckBox IsEnabled="False"></CheckBox>
+          <CheckBox IsEnabled="False">  Unchecked</CheckBox>
+          <CheckBox IsEnabled="False">Checked</CheckBox>
+          <CheckBox IsEnabled="False" IsThreeState="True" IsChecked="{x:Null}">Indeterminate</CheckBox>
+          <CheckBox IsEnabled="False" Width="120">Checkbox should wrap its text</CheckBox>
+        </StackPanel>
+      </Grid>
+     
+    </Border>
+  </Design.PreviewWith>
+
+ 
+  
+  <ControlTheme x:Key="{x:Type CheckBox}" TargetType="CheckBox">
+    <Setter Property="Padding" Value="8,0,0,0" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="HorizontalContentAlignment" Value="Left" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="CornerRadius" Value="7" />
+    <Setter Property="MinHeight" Value="32" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}" />
+    <Setter Property="Background" Value="{DynamicResource CheckBoxBackgroundUnchecked}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryButtonBackgroundGradient}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Grid x:Name="RootGrid" ColumnDefinitions="30,*">
+      
+          <Grid VerticalAlignment="{TemplateBinding VerticalAlignment}" >
+            <Border x:Name="NormalRectangle"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Background="Transparent"
+                    BorderThickness="3"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    UseLayoutRounding="False"
+                    Height="30"
+                    Width="30" />
+
+         <Label x:Name="CheckGlyph" Content="" Opacity="0" Foreground="{DynamicResource PrimaryForeground}" FontFamily="{DynamicResource PhosphorFill}" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+          </Grid>
+          <ContentPresenter x:Name="PART_ContentPresenter"
+                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                          Content="{TemplateBinding Content}"
+                          Margin="{TemplateBinding Padding}"
+                          Foreground="{TemplateBinding Foreground}"
+                          RecognizesAccessKey="True"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          TextWrapping="Wrap"
+                          Grid.Column="1" />
+        </Grid>
+      </ControlTemplate>
+    </Setter>
+
+    <!-- Unchecked PointerOver State -->
+    <Style Selector="^:pointerover">
+      <Style Selector="^ /template/ Border#NormalRectangle">
+        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryButtonBackgroundGradient}" />
+      </Style>
+    </Style>
+
+    <!-- Unchecked Pressed State -->
+    <Style Selector="^:pressed">
+     
+     
+      <Style Selector="^ /template/ Border#NormalRectangle">
+        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeUncheckedPressed}" />
+        <Setter Property="Background" Value="White" />
+      
+      </Style>
+      <Style Selector="^ /template/ Label#CheckGlyph">
+        <Setter Property="Opacity" Value="1" />
+      </Style>
+     
+    </Style>
+
+    <!-- Unchecked Disabled state -->
+    <Style Selector="^:disabled">
+      <Style Selector="^ /template/ Border#NormalRectangle">
+        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeUncheckedDisabled}" />
+        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillUncheckedDisabled}" />
+      </Style>
+
+      <Style Selector="^ /template/ Path#CheckGlyph">
+        <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundUncheckedDisabled}" />
+       
+      </Style>
+    </Style>
+
+    <Style Selector="^:checked">
+      <!-- Checked Normal State -->
+     
+      <Setter Property="Background" Value="{DynamicResource PrimaryButtonBackgroundGradient}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource PrimaryButtonBackgroundGradient}" />
+
+      
+
+      <Style Selector="^ /template/ Label#CheckGlyph">
+        <Setter Property="Opacity" Value="1" />
+      </Style>
+
+      <!-- Checked PointerOver State -->
+      <Style Selector="^:pointerover">
+      
+
+
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeCheckedPointerOver}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillCheckedPointerOver}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#CheckGlyph">
+          <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundCheckedPointerOver}" />
+        </Style>
+      </Style>
+
+      <!-- Checked Pressed State -->
+      <Style Selector="^:pressed">
+      
+
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeCheckedPressed}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillCheckedPressed}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#CheckGlyph">
+          <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundCheckedPressed}" />
+        </Style>
+      </Style>
+
+      <!-- Checked Disabled State -->
+      <Style Selector="^:disabled">
+    
+
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeCheckedDisabled}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillCheckedDisabled}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#CheckGlyph">
+          <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundCheckedDisabled}" />
+        </Style>
+      </Style>
+    </Style>
+
+    <Style Selector="^:indeterminate">
+      <!-- Indeterminate Normal State -->
+   
+     
+
+      <Style Selector="^ /template/ Border#NormalRectangle">
+        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminate}" />
+        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminate}" />
+      </Style>
+
+      <Style Selector="^ /template/ Path#CheckGlyph">
+        <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundIndeterminate}" />
+        <Setter Property="Data" Value="M1536 1536v-1024h-1024v1024h1024z" />
+        <Setter Property="Width" Value="7" />
+        <Setter Property="Opacity" Value="1" />
+      </Style>
+
+      <!-- Indeterminate PointerOver State -->
+      <Style Selector="^:pointerover">
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminatePointerOver}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminatePointerOver}" />
+        </Style>
+
+       
+      </Style>
+
+      <!-- Indeterminate Pressed State -->
+      <Style Selector="^:pressed">
+       
+
+    
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminatePressed}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminatePressed}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#CheckGlyph">
+          <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundIndeterminatePressed}" />
+        </Style>
+      </Style>
+
+      <!-- Indeterminate Disabled State -->
+      <Style Selector="^:disabled">
+
+   
+        <Style Selector="^ /template/ Border#NormalRectangle">
+          <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminateDisabled}" />
+          <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminateDisabled}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#CheckGlyph">
+          <Setter Property="Fill" Value="{DynamicResource CheckBoxCheckGlyphForegroundIndeterminateDisabled}" />
+        </Style>
+      </Style>
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>

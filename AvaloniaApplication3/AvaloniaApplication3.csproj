@@ -59,7 +59,6 @@
 		<AvaloniaResource Include="Assets\Font\Phosphor-Light.ttf" />
 		<AvaloniaResource Include="Assets\Font\Phosphor-Thin.ttf" />
 		<AvaloniaResource Include="Assets\Font\Phosphor.ttf" />
-		<AvaloniaResource Include="Assets\Images\1.png" />
 		<AvaloniaResource Include="Assets\Images\Viettech.jpg" />
 	</ItemGroup>
 	

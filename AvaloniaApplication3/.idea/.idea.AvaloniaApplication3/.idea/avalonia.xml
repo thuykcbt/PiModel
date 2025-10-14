@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="App.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/Checkbox.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/iconButton.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="MainWindow.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/Styles1.axaml" value="AvaloniaApplication3.csproj" />

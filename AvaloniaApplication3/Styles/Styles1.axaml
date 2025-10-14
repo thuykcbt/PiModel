@@ -1,22 +1,26 @@
-<Styles xmlns="https://github.com/avaloniaui"
+<Style xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
-    <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" Width="220">
+    <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" Width="600">
       <!-- Add Controls for Previewer Here -->
-		<StackPanel Spacing="20">
-			<iconButton Content="Home" IconText="" HorizontalAlignment="Stretch">
-				
-			</iconButton >
-			<Button Grid.Row="1" HorizontalAlignment="Left">
-				<StackPanel Orientation="Horizontal">
-					<Label Classes="icon-only"  Content=""></Label>
-				
-
-				</StackPanel>
-			</Button>
-			
-		</StackPanel>
-
+      <Grid ColumnDefinitions="*,*">
+	      <StackPanel Spacing="20">
+		      <Button Classes="subtle" Content="Subtle" ></Button>
+		      <Button Classes="outline" Content="Outline"></Button>
+		      <Button Classes="alert" Content="alert"></Button>
+		      <Button Classes="small" Content="small"></Button>
+		      <iconButton Content="Home" IconText="" HorizontalAlignment="Stretch">
+		      </iconButton >
+		      <Button Grid.Row="1" HorizontalAlignment="Left">
+			      <Label Classes="icon-only"  Content=""></Label>
+		      </Button>
+	      </StackPanel>
+<StackPanel Grid.Column="1" Spacing="20">
+	<CheckBox></CheckBox>
+	<CheckBox> has contents </CheckBox>
+</StackPanel>
+      </Grid>
+		
 
 	
 		</Border>
@@ -26,6 +30,11 @@
 	<Style Selector="Window">
 		<Setter Property="FontFamily" Value="{DynamicResource Nunito}"></Setter>
 	</Style>
+  <Style Selector="Label.h2">
+	  <Setter Property="Padding" Value="0,0,7,0"></Setter>
+	  <Setter Property="FontSize" Value="20"></Setter>
+	  <Setter Property="FontWeight" Value="Bold"></Setter>
+  </Style>
 	
 	<!-- Custom Styles -->
 	<Style Selector="Label.icon">
@@ -39,35 +48,77 @@
 		
 	</Style>
 	<Style Selector="Label.icon-only">
-		<Setter Property="Margin" Value="0 -10 -10 0"></Setter> 
+		<Setter Property="Margin" Value="0 0 -10 0"></Setter> 
 		
 	</Style>
 	
-
-	<Style Selector=":is(Button)">
-	<Setter Property="FontSize" Value="20"></Setter>
-		<Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryForeground}"></Setter>
-		<Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryBackground}"></Setter>
+<!-- Button Style Here -->
+  <!-- para Button fixed -->
+	<Style Selector=":is(Button):not(CheckBox)">
+		<Setter Property="FontSize" Value="20"></Setter>
 		<Setter	Property="Padding" Value="10 18 10 15"></Setter>
-		<Setter Property="RenderTransform" Value="scale(1)"></Setter>
+		<Setter Property="CornerRadius" Value="10"></Setter>
+		<Setter Property="FontWeight" Value="Bold"></Setter>
 	</Style>
-  <Style Selector=":is(Button).active/template/ContentPresenter">
-	
-	
-	  <Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryActiveBackground}"></Setter>
-	  
+  <!-- Normal Button -->
+  <Style Selector=":is(Button):not(CheckBox)">
+	  <Setter Property="Foreground" Value="Black"></Setter>
+	  <Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryButtonBackgroundGradient}"></Setter>
+  </Style>
+  <!-- Subtle Button -->
+  <Style Selector=":is(Button).subtle">
+	  <Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryForeground}"></Setter>
+	  <Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryBackground}"></Setter>
+	  <Setter Property="FontSize" Value="15"></Setter>
+	 
+  </Style>
+  <!-- Small Button -->
+  <Style Selector=":is(Button).small">
+	  <Setter Property="FontSize" Value="12"></Setter>
+	  <Setter Property="CornerRadius" Value="10"></Setter>
+  </Style>
+  <!-- Outline Button -->
+  <Style Selector=":is(Button).outline">
+	  <Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryForeground}"></Setter>
+	  <Setter Property="Background" Value="Transparent"></Setter>
+	  <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=PrimaryButtonBackgroundGradient}"></Setter>
+	  <Setter Property="BorderThickness" Value="3"></Setter>
   </Style>
   
-  
-  
-  
-  
-  
-	<Style Selector=":is(Button):pointerover">
-	
-		<Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryHoverForeground}"></Setter>
-		<Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryHoverBackground}"></Setter>
-		<Setter Property="RenderTransform" Value="scale(1.1)"></Setter>
-	</Style>
+  <!-- Alert Button -->
+  <Style Selector=":is(Button).alert">
+	  <Setter Property="Foreground" Value="Black"></Setter>
+	  <Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryButtonAlertBackgroundGradient}"></Setter>
+  </Style>
 
-</Styles>
+  
+  
+  <Style Selector=":is(Button)/template/ContentPresenter">
+	 <Setter Property="Transitions">
+		 <Transitions>
+			 <BrushTransition Property="Foreground" Duration="0:0:0.1"/>
+			 <BrushTransition Property="Background" Duration="0:0:0.1"/>
+			 <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"/>
+		 </Transitions>
+	 </Setter>
+  </Style>
+  <Style Selector=":is(Button).outline:pointerover/template/ContentPresenter">
+	  <Setter Property="Foreground" Value="Black"></Setter>
+	  <Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryButtonBackgroundGradient}"></Setter>
+  </Style>
+  
+	<Style Selector=":is(Button):not(CheckBox):pointerover/template/ContentPresenter">
+		<Setter Property="RenderTransform" Value="scale(1.05)"></Setter>
+		<Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryHoverBackground}"></Setter>
+	</Style>
+  <Style Selector=":is(Button).active/template/ContentPresenter">
+	 <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackground}"></Setter>
+  </Style>
+  <Style Selector=":is(Button).transparent">
+	  <Setter Property="Background" Value="Transparent"></Setter>
+  </Style>
+  <Style Selector=":is(Button).transparent Label.icon-only" >
+	  <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+  </Style>
+</Style>
+

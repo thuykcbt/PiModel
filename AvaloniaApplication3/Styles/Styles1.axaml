@@ -9,7 +9,7 @@
 		      <Button Classes="outline" Content="Outline"></Button>
 		      <Button Classes="alert" Content="alert"></Button>
 		      <Button Classes="small" Content="small"></Button>
-		      <iconButton Content="Home" IconText="" HorizontalAlignment="Stretch">
+		      <iconButton  Content="Home" IconText="" HorizontalAlignment="Stretch" VerticalAlignment="Center">
 		      </iconButton >
 		      <Button Grid.Row="1" HorizontalAlignment="Left">
 			      <Label Classes="icon-only"  Content=""></Label>
@@ -35,6 +35,10 @@
 	  <Setter Property="FontSize" Value="20"></Setter>
 	  <Setter Property="FontWeight" Value="Bold"></Setter>
   </Style>
+  <Style Selector="Label.h1">
+	  <Setter Property="FontSize" Value="8"/>
+	  <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonAlertBackgroundGradient}"></Setter>
+  </Style>
 	
 	<!-- Custom Styles -->
 	<Style Selector="Label.icon">
@@ -42,21 +46,20 @@
 
 	</Style>
 	<Style Selector="Label.icon,Label.icon-only">
-		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=PhosphorFill}"></Setter>
 		<Setter Property="FontSize" Value="20"></Setter>
 		<Setter  Property="Padding" Value="0 0 10 0"></Setter>
-		
+		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=PhosphorFill}"></Setter>
 	</Style>
 	<Style Selector="Label.icon-only">
 		<Setter Property="Margin" Value="0 0 -10 0"></Setter> 
-		
+	
 	</Style>
 	
 <!-- Button Style Here -->
   <!-- para Button fixed -->
 	<Style Selector=":is(Button):not(CheckBox)">
-		<Setter Property="FontSize" Value="20"></Setter>
-		<Setter	Property="Padding" Value="10 18 10 15"></Setter>
+		<Setter Property="FontSize" Value="17"></Setter>
+		<Setter	Property="Padding" Value="10 4 10 4"></Setter>
 		<Setter Property="CornerRadius" Value="10"></Setter>
 		<Setter Property="FontWeight" Value="Bold"></Setter>
 	</Style>
@@ -76,6 +79,7 @@
   <Style Selector=":is(Button).small">
 	  <Setter Property="FontSize" Value="12"></Setter>
 	  <Setter Property="CornerRadius" Value="10"></Setter>
+	  
   </Style>
   <!-- Outline Button -->
   <Style Selector=":is(Button).outline">

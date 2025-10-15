@@ -1,0 +1,48 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" Width="100">
+      <!-- Add Controls for Previewer Here -->
+      <Grid RowDefinitions="*" >
+		
+			<StackPanel Spacing="10">
+				<Label Classes="icon" Content=""></Label>
+				<Label Classes="h1"  Content="Label Header 1"></Label>
+				<Label Classes="h2"  Content="Label Header 2"></Label>
+			
+				<Label Classes="icon-only"  Content=""></Label>
+			</StackPanel>
+	
+      </Grid>
+    </Border>
+  </Design.PreviewWith>
+
+  <!-- Add Styles Here -->
+  
+  <Style Selector="Label.h2">
+	  <Setter Property="Padding" Value="0,0,7,0"></Setter>
+	  <Setter Property="FontSize" Value="20"></Setter>
+	  <Setter Property="FontWeight" Value="Bold"></Setter>
+	  <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+	
+  </Style>
+  <Style Selector="Label.h1">
+	  <Setter Property="FontSize" Value="8"/>
+	  <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonAlertBackgroundGradient}"></Setter>
+  </Style>
+	
+  <!-- Custom Styles -->
+  <Style Selector="Label.icon">
+	  <Setter Property="Margin" Value="0 0 2 0"></Setter>
+
+  </Style>
+  <Style Selector="Label.icon,Label.icon-only">
+	  <Setter Property="FontSize" Value="20"></Setter>
+	  <Setter  Property="Padding" Value="0 0 10 0"></Setter>
+	  <Setter Property="FontFamily" Value="{DynamicResource ResourceKey=PhosphorFill}"></Setter>
+  </Style>
+  <Style Selector="Label.icon-only">
+	  <Setter Property="Margin" Value="0 0 -10 0"></Setter> 
+	
+  </Style>
+</Styles>

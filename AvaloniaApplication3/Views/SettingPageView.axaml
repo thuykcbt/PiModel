@@ -13,21 +13,7 @@
         <vm:SettingPageViewModel></vm:SettingPageViewModel>
     </Design.DataContext>
     <UserControl.Styles>
-        <Style Selector="ListBox">
-            <Setter Property="Background" Value="{DynamicResource PrimaryBackgroundGradient}"/>
-            <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
-            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"/>
-            <Setter Property="BorderThickness" Value="3"></Setter>
-            
-        </Style>
-        <Style Selector="ListBox ListBoxItem:selected/template/ContentPresenter">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
-        </Style>
-        <Style Selector="ListBox ListBoxItem:pointerover/template/ContentPresenter">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
-        </Style>
+     
     </UserControl.Styles>
     <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
       <!-- Header-->

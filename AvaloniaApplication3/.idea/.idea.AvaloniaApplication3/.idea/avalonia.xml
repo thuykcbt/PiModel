@@ -5,10 +5,14 @@
       <map>
         <entry key="App.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/Checkbox.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/Combobox.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/iconButton.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="MainWindow.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Styles/ListBoxStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/Styles1.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/Styles2.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Styles/TextBlockStyle.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Styles/TextBoxStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/ActionPageView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HistoryPageView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HomePageView.axaml" value="AvaloniaApplication3.csproj" />

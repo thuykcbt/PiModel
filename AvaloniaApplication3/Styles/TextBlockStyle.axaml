@@ -1,0 +1,14 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20"   Background="{DynamicResource PrimaryBackgroundGradient}" Width="100">
+            <!-- Add Controls for Previewer Here -->
+            <TextBlock  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  TextWrapping="Wrap" Text="Remove license of BatchProcess from this machine and release the license back to the server ready to be transferred to another machine.">
+           
+            </TextBlock>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+   
+</Styles>

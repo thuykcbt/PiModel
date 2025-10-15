@@ -8,13 +8,13 @@
 	<Application.DataTemplates>
 		<local:ViewLocator></local:ViewLocator>
 	</Application.DataTemplates>
-             
-             
              <Application.Styles>
 	             <FluentTheme />
-
-		<StyleInclude Source="Styles/Styles1.axaml"></StyleInclude>
-		
+		         <StyleInclude Source="Styles/ButtonStyle.axaml"></StyleInclude>
+	             <StyleInclude Source="Styles/LableStyle.axaml"></StyleInclude>
+	             <StyleInclude Source="Styles/ListBoxStyle.axaml"></StyleInclude>
+	             <StyleInclude Source="Styles/TextBlockStyle.axaml"></StyleInclude>
+	             <StyleInclude Source="Styles/TextBoxStyle.axaml"></StyleInclude>
 	</Application.Styles>
              
 	<Application.Resources>
@@ -23,6 +23,7 @@
 			<ResourceDictionary.MergedDictionaries>
 				<MergeResourceInclude Source="/Controls/iconButton.axaml"></MergeResourceInclude>
 				<MergeResourceInclude Source="/Controls/Checkbox.axaml"></MergeResourceInclude>
+				<MergeResourceInclude Source="/Controls/Combobox.axaml"></MergeResourceInclude>
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 		<SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>
@@ -46,6 +47,7 @@
 		<SolidColorBrush x:Key="PrimaryPressForeground">Black</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryPressBackground">White</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryActiveBackground">#6622dd</SolidColorBrush>
+		<SolidColorBrush x:Key="OutlineButtonForeground">#00ffff</SolidColorBrush>
 
 		<FontFamily x:Key="Phosphor">/Assets/Font/Phosphor.ttf#Phosphor</FontFamily>
 		<FontFamily x:Key="PhosphorBold">/Assets/Font/Phosphor-Bold.ttf#Phosphor-Bold</FontFamily>

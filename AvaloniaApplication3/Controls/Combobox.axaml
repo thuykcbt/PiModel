@@ -83,7 +83,7 @@
                     Grid.ColumnSpan="2"
                     Background="{TemplateBinding Background}"
                     BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
+                    BorderThickness="{TemplateBinding  BorderThickness}"
                     CornerRadius="{TemplateBinding CornerRadius}"
                     MinWidth="{DynamicResource ComboBoxThemeMinWidth}" />
       
@@ -176,13 +176,13 @@
     <!--  PointerOver State  -->
     <Style Selector="^:pointerover">
       <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}" />
-      <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBorderBrushPointerOver}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource PrimaryButtonHoverGradient}" />
     </Style>
 
     <!--  Pressed State  -->
     <Style Selector="^:pressed">
-      <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundPressed}" />
-      <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBorderBrushPressed}" />
+      <Setter Property="Background" Value="{DynamicResource PrimaryBackground}" />
+  
     </Style>
 
     <!-- Error State -->
@@ -193,45 +193,24 @@
     <!--  Focus Pressed State  -->
     <Style Selector="^:focus:pressed">
       <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundFocusedPressed}" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}" />
       </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxPlaceHolderForegroundFocusedPressed}" />
-      </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxDropDownGlyphForegroundFocusedPressed}" />
-      </Style>
+    
     </Style>
 
     <!--  Focused State  -->
-    <Style Selector="^:focus-visible">
-     
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundFocused}" />
-      </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundFocused}" />
-      </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxDropDownGlyphForegroundFocused}" />
-      </Style>
-    </Style>
+   
 
     <!--  Disabled State  -->
     <Style Selector="^:disabled">
       <Style Selector="^">
-        <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundDisabled}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBorderBrushDisabled}" />
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryDisable}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryDisable}"></Setter>
+        <Setter Property="PlaceholderForeground" Value="{DynamicResource PrimaryDisable}"></Setter>
+        
       </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundDisabled}" />
-      </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxForegroundDisabled}" />
-      </Style>
-      <Style Selector="^">
-        <Setter Property="Foreground" Value="{DynamicResource ComboBoxDropDownGlyphForegroundDisabled}" />
-      </Style>
+     
     </Style>
 
    

@@ -42,6 +42,7 @@
 	  <AvaloniaResource Include="Assets\Font\Nunito-SemiBold.ttf" />
 	  <None Remove="Assets\Font\Nunito-SemiBoldItalic.ttf" />
 	  <AvaloniaResource Include="Assets\Font\Nunito-SemiBoldItalic.ttf" />
+	  <None Remove="Assets\Font\endless-constellation.svg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Font\house-line-duotone.svg" />

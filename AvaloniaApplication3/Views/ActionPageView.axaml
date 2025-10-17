@@ -2,8 +2,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             Foreground="White"
+             xmlns:vm = "clr-namespace:AvaloniaApplication3.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="1000"
+             Background="{DynamicResource PrimaryBackground}"
+             Foreground="{DynamicResource PrimaryForeground}"
+             x:DataType="vm:ActionPageViewModel"
              x:Class="AvaloniaApplication3.Views.ActionPageView">
-    Welcome to ActionPageView!
+    <Design.DataContext>
+        <vm:SettingPageViewModel></vm:SettingPageViewModel>
+    </Design.DataContext>
+    <UserControl.Styles>
+     
+    </UserControl.Styles>
+    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
+        <!-- Header-->
+        <Grid Name="HeaderGrid" Grid.ColumnSpan="2"  >
+            <Image  Source="{SvgImage /Assets/Images/background.svg}"
+                    Stretch="Fill"  Height="170">
+            </Image>
+            <StackPanel HorizontalAlignment="Left">
+                <Label Content="Settings"></Label>
+                <Label Content="Version 3.0.0.2 Beta"></Label>
+                <Label Content="Compiled Oct 10"></Label>
+            </StackPanel>
+        </Grid>
+    </Grid>
 </UserControl>

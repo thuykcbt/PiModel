@@ -11,6 +11,7 @@
    <Style Selector="TextBox">
        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryButtonBackgroundGradient}"></Setter>
        <Setter Property="BorderThickness" Value="3"></Setter>
+       <Setter Property="FontSize" Value="17"></Setter>
    </Style>
     <Style Selector="TextBox:pointerover/template/ContentPresenter">
         <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"></Setter>

@@ -24,10 +24,14 @@
 				<MergeResourceInclude Source="/Controls/iconButton.axaml"></MergeResourceInclude>
 				<MergeResourceInclude Source="/Controls/Checkbox.axaml"></MergeResourceInclude>
 				<MergeResourceInclude Source="/Controls/Combobox.axaml"></MergeResourceInclude>
+				<MergeResourceInclude Source="/Controls/ComboboxItem.axaml"></MergeResourceInclude>
+				<MergeResourceInclude Source="/Controls/ListBoxItem.axaml"></MergeResourceInclude>
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 		<SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryBackground">#14172D</SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryDisable">#647191</SolidColorBrush>
+
 
 		<LinearGradientBrush x:Key="PrimaryBackgroundGradient" StartPoint="0,0" EndPoint="100,0">
 			<GradientStop Offset="0" Color="#111214"></GradientStop>
@@ -36,6 +40,10 @@
 		<LinearGradientBrush x:Key="PrimaryButtonBackgroundGradient" StartPoint="0,0" EndPoint="100,0">
 			<GradientStop Offset="0" Color="#00ffff"></GradientStop>
 			<GradientStop Offset="1" Color="#ff00ff"></GradientStop>
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="PrimaryButtonHoverGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+			<GradientStop Offset="0" Color="#00ffff"></GradientStop>
+			<GradientStop Offset="1" Color="#00ffff"></GradientStop>
 		</LinearGradientBrush>
 	
 		<LinearGradientBrush x:Key="PrimaryButtonAlertBackgroundGradient" StartPoint="0,0" EndPoint="100,0">

@@ -18,7 +18,7 @@
     <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
       <!-- Header-->
       <Grid Name="HeaderGrid" Grid.ColumnSpan="2"  >
-          <Image  Source="avares://AvaloniaApplication3/Assets/Images/Doraemon-PNG-Photos.png"
+          <Image  Source="{SvgImage /Assets/Images/background.svg}"
                   Stretch="Fill"  Height="170">
           </Image>
           <StackPanel HorizontalAlignment="Left">
@@ -74,7 +74,7 @@
                   <LineBreak></LineBreak>
                   <LineBreak></LineBreak>
                   Enter the machine IP address,network name or localhost for this machine</TextBlock>
-              <ComboBox></ComboBox>
+              <ComboBox ItemsSource="{Binding LocationsPaths}"></ComboBox>
               <Label Classes="h1" Content="Connection established" Margin="0 -5"></Label>
            
           </StackPanel>
@@ -82,10 +82,10 @@
             <StackPanel>
                 <Label Classes="h2" Content="PDM Enterprise"></Label> 
                 <TextBlock TextWrapping="Wrap" Text="if you are using PDM Enterprise enter the credentials below and test login. BatchProcess can the automatically hanle checking in and out files from PDM Enterprise."></TextBlock>
-                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" >
+                <Grid ColumnDefinitions="*,*,*"  HorizontalAlignment="Stretch" ColumnSpacing="20" >
                     <ComboBox Grid.Column="0" HorizontalAlignment="Stretch"></ComboBox>
-                    <TextBox Grid.Column="1"></TextBox>
-                    <TextBox PasswordChar="*"  Grid.Column="2"> somepasswork</TextBox>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">Username</TextBox>
+                    <TextBox PasswordChar="*"  Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Center"> somepasswork</TextBox>
                 </Grid>
                 <StackPanel Orientation="Horizontal" Spacing="30" Margin="0 20">
                     <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">

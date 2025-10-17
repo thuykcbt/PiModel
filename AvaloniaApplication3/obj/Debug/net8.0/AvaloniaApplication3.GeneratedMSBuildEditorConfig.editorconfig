@@ -35,7 +35,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/Combobox.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/ComboboxItem.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/iconButton.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/ListBoxItem.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Styles/ButtonStyle.axaml]

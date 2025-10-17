@@ -19,12 +19,5 @@
         <Setter Property="BorderThickness" Value="3"></Setter>
             
     </Style>
-    <Style Selector="ListBox ListBoxItem:selected/template/ContentPresenter">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
-    </Style>
-    <Style Selector="ListBox ListBoxItem:pointerover/template/ContentPresenter">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
-    </Style>
+   
 </Styles>

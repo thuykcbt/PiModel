@@ -52,8 +52,8 @@ namespace AvaloniaApplication3.ViewModels
         }
         public MainViewModel(PageFactory pageFactory)
         {
-            _pageFactory = pageFactory;
-            GotoHome();
+            _pageFactory = pageFactory ?? throw new AggregateException(nameof(pageFactory));
+            CurrentPage=_pageFactory.GetPageViewModel(ApplicationPageNames.Setting);
         }
         [RelayCommand]
         private void SideMenuResize()

@@ -3,11 +3,15 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="ActionViews/Print.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="App.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/Checkbox.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/Combobox.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/ComboboxItem.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/ListBoxItem.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/TabContro.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/TabControl.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/TabItem.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/iconButton.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="MainWindow.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/ButtonStyle.axaml" value="AvaloniaApplication3.csproj" />

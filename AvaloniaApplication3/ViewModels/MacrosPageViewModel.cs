@@ -3,11 +3,7 @@ using AvaloniaApplication3.ViewModels;
 
 namespace AvaloniaApplication3.ViewModels;
 
-public partial class MacrosPageViewModel:PageViewModel
+public partial class MacrosPageViewModel():PageViewModel( ApplicationPageNames.Marcos)
 {
     public string Test { get; set; } = "Home";
-    public MacrosPageViewModel()
-    {
-        PageName = ApplicationPageNames.Marcos;
-    }
 }

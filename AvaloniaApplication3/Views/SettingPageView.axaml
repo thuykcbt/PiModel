@@ -19,12 +19,12 @@
       <!-- Header-->
       <Grid Name="HeaderGrid" Grid.ColumnSpan="2"  >
           <Image  Source="{SvgImage /Assets/Images/background.svg}"
-                  Stretch="Fill"  Height="170">
+                  Stretch="Fill"  Height="100">
           </Image>
-          <StackPanel HorizontalAlignment="Left">
-              <Label Content="Settings"></Label>
-              <Label Content="Version 3.0.0.2 Beta"></Label>
-              <Label Content="Compiled Oct 10"></Label>
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" Spacing="">
+              <Label Classes="h40" Content="Settings"></Label>
+              <Label Classes="h2" Content="Version 3.0.0.2 Beta"></Label>
+              <Label Classes="h1" Content="Compiled Oct 10"></Label>
           </StackPanel>
       </Grid>
       <!-- Left side Content -->

@@ -3,10 +3,7 @@ using AvaloniaApplication3.ViewModels;
 
 namespace AvaloniaApplication3.ViewModels;
 
-public partial class ReporterPageViewModel : PageViewModel
+public partial class ReporterPageViewModel() : PageViewModel(ApplicationPageNames.Reporter)
 {
-    public ReporterPageViewModel()
-    {
-        PageName = ApplicationPageNames.Reporter;
-    }
+ 
 }

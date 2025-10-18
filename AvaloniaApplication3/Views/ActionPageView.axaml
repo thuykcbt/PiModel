@@ -14,11 +14,11 @@
     <UserControl.Styles>
      
     </UserControl.Styles>
-    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto,*">
         <!-- Header-->
-        <Grid Name="HeaderGrid" Grid.ColumnSpan="2"  >
+        <Grid Name="HeaderGrid"  >
             <Image  Source="{SvgImage /Assets/Images/background.svg}"
-                    Stretch="Fill"  Height="170">
+                    Stretch="Fill"  Height="100">
             </Image>
             <StackPanel HorizontalAlignment="Left">
                 <Label Content="Settings"></Label>
@@ -26,5 +26,33 @@
                 <Label Content="Compiled Oct 10"></Label>
             </StackPanel>
         </Grid>
+        <StackPanel Grid.Row="1" >
+            <TabControl>
+                <TabItem Header="Print" IsSelected="True">
+                    <TextBlock>Tab 1 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Custom Properties">
+                    <TextBlock>Tab 2 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="File Info">
+                    <TextBlock>Tab 3 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Save Model As">
+                    <TextBlock>Tab 4 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Save Drawing As">
+                    <TextBlock>Tab 5 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Import File">
+                    <TextBlock>Tab 6 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Drawing Templates">
+                    <TextBlock>Tab 7 Control</TextBlock>
+                </TabItem>
+                <TabItem Header="Macros">
+                    <TextBlock>Tab 8 Control</TextBlock>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
     </Grid>
 </UserControl>

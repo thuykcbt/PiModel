@@ -26,6 +26,9 @@
 				<MergeResourceInclude Source="/Controls/Combobox.axaml"></MergeResourceInclude>
 				<MergeResourceInclude Source="/Controls/ComboboxItem.axaml"></MergeResourceInclude>
 				<MergeResourceInclude Source="/Controls/ListBoxItem.axaml"></MergeResourceInclude>
+				<MergeResourceInclude Source="/Controls/TabControl.axaml"></MergeResourceInclude>
+				<MergeResourceInclude Source="/Controls/TabItem.axaml"></MergeResourceInclude>
+				
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 		<SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>

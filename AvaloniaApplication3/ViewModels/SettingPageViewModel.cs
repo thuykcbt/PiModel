@@ -9,7 +9,7 @@ public partial class SettingPageViewModel : PageViewModel
 {
     [ObservableProperty]
     private ObservableCollection<string> _locationsPaths;
-    public SettingPageViewModel()
+    public SettingPageViewModel() : base(ApplicationPageNames.Setting)
     {
         PageName = ApplicationPageNames.Setting;
         // Remove 

@@ -10,8 +10,8 @@
 				<Label Classes="h1"  Content="Label Header 1"></Label>
 				<Label Classes="h2"  Content="Label Header 2"></Label>
 				<Label Classes="h40" Content="h40"></Label>
-			
 				<Label Classes="icon-only"  Content=""></Label>
+				<Label Classes="icon-outline"  Content=""></Label>
 			</StackPanel>
 	
       </Grid>
@@ -51,6 +51,11 @@
   </Style>
   <Style Selector="Label.icon-only">
 	  <Setter Property="Margin" Value="0 0 -10 0"></Setter> 
-	
+  </Style>
+  <Style Selector="Label.icon-outline">
+	  <Setter Property="Margin" Value="0 0 -10 0"></Setter> 
+	  <Setter Property="FontSize" Value="15"></Setter>
+	  <Setter  Property="Padding" Value="0 0 10 0"></Setter>
+	  <Setter Property="FontFamily" Value="{DynamicResource ResourceKey=PhosphorFill}"></Setter>
   </Style>
 </Styles>

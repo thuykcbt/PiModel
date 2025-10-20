@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm = "clr-namespace:AvaloniaApplication3.ViewModels"
+             xmlns:local ="clr-namespace:AvaloniaApplication3.ActionViews"
              mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="1000"
              Background="{DynamicResource PrimaryBackground}"
              Foreground="{DynamicResource PrimaryForeground}"
@@ -26,10 +27,10 @@
                 <Label Content="Compiled Oct 10"></Label>
             </StackPanel>
         </Grid>
-        <StackPanel Grid.Row="1" >
-            <TabControl>
+        <Grid Grid.Row="1" >
+            <TabControl Name="ActionTabControl" SelectionChanged="ActionTab_OnSelectionChanged">
                 <TabItem Header="Print" IsSelected="True">
-                    <TextBlock>Tab 1 Control</TextBlock>
+                   <local:Print></local:Print>
                 </TabItem>
                 <TabItem Header="Custom Properties">
                     <TextBlock>Tab 2 Control</TextBlock>
@@ -53,6 +54,6 @@
                     <TextBlock>Tab 8 Control</TextBlock>
                 </TabItem>
             </TabControl>
-        </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

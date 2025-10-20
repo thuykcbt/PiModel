@@ -3,11 +3,11 @@
 public enum ApplicationPageNames
 {
     Unknown,
-    Home,
-    Process,
-    Action,
-    Marcos,
-    Reporter,
-    History,
-    Setting,
+    Home =1,
+    Process=2,
+    Action=3,
+    Marcos=4,
+    Reporter=5,
+    History=6,
+    Setting=7,
 }

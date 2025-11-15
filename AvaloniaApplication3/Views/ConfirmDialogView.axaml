@@ -1,0 +1,41 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication3.ViewModels"
+             x:DataType="vm:ConfirmDialogViewmodel"
+             MinWidth="300"
+             Foreground="{DynamicResource PrimaryForeground}"
+             Background="{DynamicResource PrimaryBackground}"
+             x:Class="AvaloniaApplication3.Views.ConfirmDialogView">
+    
+    <Design.DataContext><vm:ConfirmDialogViewmodel></vm:ConfirmDialogViewmodel></Design.DataContext>
+    <!-- Main Dialog Window -->
+    <Border Background="{DynamicResource PrimaryBackground}"
+            BorderBrush="{DynamicResource DefaultGradient}"
+            BorderThickness="{DynamicResource PrimaryBorderThickness}"
+            CornerRadius="20" 
+            ClipToBounds="True" 
+            Margin="10">
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource PrimaryBackgroundColor2}"/>
+        </Border.Effect>
+        <StackPanel>
+            
+            <!-- Title -->
+            <Border Background="{DynamicResource PrimaryBackgroundGradient}" CornerRadius="20 20 0 0">
+                <TextBlock Text="{Binding Title}"
+                           Padding="20"
+                           FontWeight="Bold"
+                           FontSize="20"
+                           />
+            </Border>
+            <!-- Description -->
+            <Border Padding="20">
+                <StackPanel Orientation="Horizontal">
+                    <Label Classes="icon" Content="{Binding IconText}"></Label>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Border>
+</UserControl>

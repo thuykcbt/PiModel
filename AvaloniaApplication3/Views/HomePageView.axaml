@@ -2,8 +2,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             Foreground="White"
+             xmlns:vm = "clr-namespace:AvaloniaApplication3.ViewModels"
+             xmlns:local ="clr-namespace:AvaloniaApplication3.ActionViews"
+             xmlns:halconDotNet="clr-namespace:HalconDotNet;assembly=halcondotnet"
+             mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="1000"
+             Background="{DynamicResource PrimaryBackground}"
+             Foreground="{DynamicResource PrimaryForeground}"
+             x:DataType="vm:HomePageViewModel"
              x:Class="AvaloniaApplication3.Views.HomePageView">
-    Welcome to Home Page!
+             
+             <Design.DataContext>
+                 <vm:SettingPageViewModel></vm:SettingPageViewModel>
+             </Design.DataContext>
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto,*">
+        <Grid Name="HeaderGrid"  >
+            <Image  Source="{SvgImage /Assets/Images/background.svg}"
+                    Stretch="Fill"  Height="100">
+            </Image>
+            <StackPanel HorizontalAlignment="Left">
+                <Label Content="Main Web"></Label>
+                <Label Content="Version 3.0.0.2 Beta"></Label>
+                <Label Content="Compiled Oct 10"></Label>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid ColumnDefinitions="*,*">
+                <Grid>
+                    <Button Content="load" Command="{Binding LoadHalconImageCommand }"></Button>
+                    <Image Source="{Binding DisplayImage}"></Image>
+                    
+                </Grid>
+            </Grid>
+        </Grid>
+        
+        
+        
+        
+        
+    </Grid>
+             
 </UserControl>

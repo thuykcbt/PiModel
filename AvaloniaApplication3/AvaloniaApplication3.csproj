@@ -84,4 +84,14 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
+	
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>C:\Program Files\MVTec\HALCON-18.11-Progress\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="HomeViews\" />
+  </ItemGroup>
 </Project>

@@ -12,6 +12,8 @@ using System.Linq;
  {
      [ObservableProperty]
    private ObservableCollection<ActionPrintViewModel> _printList;
+   [ObservableProperty]
+   private ActionPrintViewModel _selectedPrintListItem;
      public ActionPageViewModel() : base(ApplicationPageNames.Action)
      {
          FetchPrintList();
@@ -33,9 +35,9 @@ using System.Linq;
        // TODO : Fetch from a database/service provider 
        PrintList =
        [
-           new ActionPrintViewModel { Id = "1", Jobname = "Print Only Drawings" ,IsSelected = false},
-           new ActionPrintViewModel { Id = "2", Jobname = "Print All Drawings Scale To Fit" ,IsSelected = false},
-           new ActionPrintViewModel { Id = "3", Jobname = "Print 3D Model A3",IsSelected = false },
+           new ActionPrintViewModel { Id = "1", Jobname = "Print Only Drawings" ,IsSelected = false,PrintDrawings = true,Description = "Prints Only Drawing Files",PrintDrawingRange = "0,5,7-8"},
+           new ActionPrintViewModel { Id = "2", Jobname = "Print All Drawings Scale To Fit" ,IsSelected = false,Description = "Prints drawing scaled to fit the paper",PrintDrawings = true},
+           new ActionPrintViewModel { Id = "3", Jobname = "Print 3D Model A3",IsSelected = false ,Description = "Prints model as 3D visuals",PrintModels = true},
        ];
    }
 

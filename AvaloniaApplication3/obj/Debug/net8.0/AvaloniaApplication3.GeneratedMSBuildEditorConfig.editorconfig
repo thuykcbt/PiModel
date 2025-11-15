@@ -53,6 +53,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/TabItem.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Controls/ToggleButton.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Styles/ButtonStyle.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -69,6 +72,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Views/ActionPageView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Views/ConfirmDialogView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/01. Workspace/03. Project/13.R&D Cobot/Code/ModelPi/PiModel/AvaloniaApplication3/Views/HistoryPageView.axaml]

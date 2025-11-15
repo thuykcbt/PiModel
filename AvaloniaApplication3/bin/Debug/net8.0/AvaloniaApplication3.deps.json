@@ -15,7 +15,8 @@
           "Avalonia.Svg.Skia": "11.3.0",
           "Avalonia.Themes.Fluent": "11.3.0",
           "CommunityToolkit.Mvvm": "8.4.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.9"
+          "Microsoft.Extensions.DependencyInjection": "9.0.9",
+          "halcondotnet": "18.11.0.1"
         },
         "runtime": {
           "AvaloniaApplication3.dll": {}
@@ -519,6 +520,14 @@
             "fileVersion": "0.21.2.0"
           }
         }
+      },
+      "halcondotnet/18.11.0.1": {
+        "runtime": {
+          "halcondotnet.dll": {
+            "assemblyVersion": "18.11.0.1",
+            "fileVersion": "18.11.0.1"
+          }
+        }
       }
     }
   },
@@ -793,6 +802,11 @@
       "sha512": "sha512-ScSMrUrrw8px4kK1Glh0fZv/HQUlg1078bNXNPfRPKQ3WbRzV9HpsydYEOgSoMK5LWICMf2bMwIFH0pGjxjcMA==",
       "path": "tmds.dbus.protocol/0.21.2",
       "hashPath": "tmds.dbus.protocol.0.21.2.nupkg.sha512"
+    },
+    "halcondotnet/18.11.0.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

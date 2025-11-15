@@ -1,0 +1,104 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:ClassModifier="internal">
+  <Design.PreviewWith>
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}" >
+      <StackPanel Spacing="20">
+        <ToggleButton Content="Uncheck!" />
+        <ToggleButton Content="Check!"  IsChecked="True"/>
+        <ToggleButton Content="Disabled" IsEnabled="False" />
+      </StackPanel>
+    </Border>
+  </Design.PreviewWith>
+
+  <ControlTheme x:Key="{x:Type ToggleButton}" TargetType="ToggleButton">
+    <Setter Property="Background" Value="{DynamicResource PrimaryBackground}" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}" />
+    <Setter Property="Padding" Value="0 10 0 0" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="RenderTransform" Value="none" />
+   
+    <Setter Property="Transitions">
+      <Transitions>
+        <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.075" />
+      </Transitions>
+    </Setter>
+
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Grid ColumnDefinitions="Auto,10,*">
+          <Border Padding="5" 
+                  x:Name="PART_ToggleButton"
+                
+                  BorderBrush="{DynamicResource PrimaryToggleButtonGradient}"
+                  BorderThickness="3"
+                  CornerRadius="7" Width="50" VerticalAlignment="Top">
+           <Border Width="15" Height="15" Margin="0 0 25 0" Background="{DynamicResource PrimaryForeground}" CornerRadius="7">
+           </Border>
+          </Border>
+          <TextBlock Grid.Column="2" 
+                            TextWrapping="Wrap"
+                            Padding="-1 5 0 0"
+                            Text ="{TemplateBinding Content}"
+                            FontWeight= "Normal"
+                            FontSize="15"
+          />
+        </Grid>
+       
+      </ControlTemplate>
+    </Setter>
+    <!-- Default style-->
+    <Style Selector="^">
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+      <Style Selector="^">
+        <Setter Property="FontWeight" Value="Normal"></Setter>
+        <Setter Property="FontSize" Value="4"></Setter>
+      </Style>
+    </Style>
+    <!-- IsChecked style-->
+    <Style Selector="^ /template/ Border#PART_ToggleButton">
+      <Setter Property="Background" Value="Transparent"></Setter>
+    
+    </Style>
+    <Style Selector="^:checked /template/ Border#PART_ToggleButton">
+      <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackground}"></Setter>
+    
+      <Style Selector="^ Border">
+        <Setter Property="Margin" Value="25 0 0 0"></Setter>
+      </Style>
+    </Style>
+    <!-- IsChecked-->
+<Style Selector="^:checked">
+  <Setter Property="Padding" Value="0 0 0 0"></Setter>
+  <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+  <Setter Property="Background" Value="Transparent"></Setter>
+  <Style Selector="^:pointerover /template/Border#PART_ToggleButton" >
+    <Setter Property="Background" Value="{DynamicResource PrimaryButtonBackgroundGradient}"></Setter>
+  </Style>
+</Style>
+    <!-- Uncheck-->
+    <Style Selector="^:unchecked">
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+      <Setter Property="Background" Value="Transparent"></Setter>
+      <Style Selector="^:pointerover /template/Border#PART_ToggleButton" >
+      
+          <Setter Property="BorderBrush" Value="{DynamicResource PrimaryActiveBackground}"></Setter>
+     
+      </Style>
+    </Style>
+   
+      
+    <Style Selector="^:disabled">
+      <Style Selector="^ /template/ Border#PART_ToggleButton">
+        <Setter Property="Background" Value="{DynamicResource PrimaryDisable}"></Setter>
+        <Style Selector="^ Border">
+          <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        </Style>
+      </Style>
+    </Style>
+    <Style Selector="^/template/TextBlock">
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>

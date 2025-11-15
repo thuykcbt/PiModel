@@ -32,6 +32,9 @@ namespace AvaloniaApplication3.ViewModels
         [NotifyPropertyChangedFor(nameof(HistoryPageIsActive))]
         [NotifyPropertyChangedFor(nameof(SettingPageIsActive))]
         private PageViewModel _currentPage;
+        [ObservableProperty]
+        
+        private DialogViewModel _currentDialog;
 
         
         public bool HomePageIsActive=> CurrentPage.PageName==ApplicationPageNames.Home;

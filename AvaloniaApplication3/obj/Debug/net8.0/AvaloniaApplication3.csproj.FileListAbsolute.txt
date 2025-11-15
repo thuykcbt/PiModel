@@ -309,3 +309,5 @@ D:\Project\Project Rd\PiModel\AvaloniaApplication3\obj\Debug\net8.0\refint\Avalo
 D:\Project\Project Rd\PiModel\AvaloniaApplication3\obj\Debug\net8.0\AvaloniaApplication3.pdb
 D:\Project\Project Rd\PiModel\AvaloniaApplication3\obj\Debug\net8.0\AvaloniaApplication3.genruntimeconfig.cache
 D:\Project\Project Rd\PiModel\AvaloniaApplication3\obj\Debug\net8.0\ref\AvaloniaApplication3.dll
+D:\01. Workspace\03. Project\13.R&D Cobot\Code\ModelPi\PiModel\AvaloniaApplication3\bin\Debug\net8.0\halcondotnet.dll
+D:\01. Workspace\03. Project\13.R&D Cobot\Code\ModelPi\PiModel\AvaloniaApplication3\bin\Debug\net8.0\halcondotnet.xml

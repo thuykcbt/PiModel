@@ -12,6 +12,7 @@
         <entry key="Controls/TabContro.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/TabControl.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/TabItem.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Controls/ToggleButton.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Controls/iconButton.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="MainWindow.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/ButtonStyle.axaml" value="AvaloniaApplication3.csproj" />
@@ -22,6 +23,7 @@
         <entry key="Styles/TextBlockStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/TextBoxStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/ActionPageView.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Views/ConfirmDialogView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HistoryPageView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HomePageView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HomePageViewModel.axaml" value="AvaloniaApplication3.csproj" />

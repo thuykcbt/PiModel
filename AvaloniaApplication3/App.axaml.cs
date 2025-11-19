@@ -5,6 +5,7 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Metadata;
 using AvaloniaApplication3.Data;
 using AvaloniaApplication3.Factories;
+using AvaloniaApplication3.Services;
 using AvaloniaApplication3.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 [assembly: XmlnsDefinition("https://github.com/avaloniaui", "AvaloniaApplication3.Controls")]
@@ -44,6 +45,7 @@ namespace AvaloniaApplication3
                 
             });
             collection.AddSingleton<PageFactory>();
+            collection.AddSingleton<DialogService>();
             var service = collection.BuildServiceProvider();
        
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)

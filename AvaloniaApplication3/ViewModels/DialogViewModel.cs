@@ -7,6 +7,7 @@ public partial class DialogViewModel : ViewModelBase
 {
     [ObservableProperty]
     private bool _isDialogOpen;
+    
     protected TaskCompletionSource closeTask = new TaskCompletionSource();
 
     public async Task WaitAsnyc()

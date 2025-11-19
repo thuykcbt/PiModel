@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm = "clr-namespace:AvaloniaApplication3.ViewModels"
-             xmlns:local ="clr-namespace:AvaloniaApplication3.ActionViews"
+             xmlns:local ="clr-namespace:AvaloniaApplication3.Views"
              xmlns:halconDotNet="clr-namespace:HalconDotNet;assembly=halcondotnet"
              mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="1000"
              Background="{DynamicResource PrimaryBackground}"

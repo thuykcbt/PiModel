@@ -10,6 +10,7 @@ using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using AvaloniaApplication3.Data;
 using AvaloniaApplication3.Factories;
+using AvaloniaApplication3.Interface;
 using AvaloniaApplication3.ViewModels;
 using AvaloniaApplication3.Views;
 using CommunityToolkit.Mvvm.Input;
@@ -17,7 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AvaloniaApplication3.ViewModels
 {
-    public partial class MainViewModel : ViewModelBase
+    public partial class MainViewModel : ViewModelBase,IDialogProvider
     {
        private PageFactory _pageFactory;
         [ObservableProperty]
@@ -32,9 +33,8 @@ namespace AvaloniaApplication3.ViewModels
         [NotifyPropertyChangedFor(nameof(HistoryPageIsActive))]
         [NotifyPropertyChangedFor(nameof(SettingPageIsActive))]
         private PageViewModel _currentPage;
-        [ObservableProperty]
-        
-        private DialogViewModel _currentDialog;
+
+        [ObservableProperty] private DialogViewModel _dialog ;
 
         
         public bool HomePageIsActive=> CurrentPage.PageName==ApplicationPageNames.Home;
@@ -52,6 +52,7 @@ namespace AvaloniaApplication3.ViewModels
         public MainViewModel()
         {
             CurrentPage = new SettingPageViewModel();
+          
         }
         public MainViewModel(PageFactory pageFactory)
         {

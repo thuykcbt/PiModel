@@ -1,0 +1,17 @@
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace AvaloniaApplication3.ViewModels;
+
+public partial class ActionPrinterSettingViewModel : ViewModelBase
+{
+    [ObservableProperty]private string _type;
+    [ObservableProperty]private string _printerName;
+    [ObservableProperty]private string _printerSize;
+    [ObservableProperty]private string _width;
+    [ObservableProperty]private string _height;
+    [ObservableProperty]private bool? _portrait;
+    [ObservableProperty]private string _sourceTray;
+    [ObservableProperty]private string _drawingColor;
+    [ObservableProperty]private bool _scaleToFit;
+    
+}

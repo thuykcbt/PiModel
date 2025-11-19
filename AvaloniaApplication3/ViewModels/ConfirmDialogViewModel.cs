@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace AvaloniaApplication3.ViewModels;
 
-public partial class ConfirmDialogViewmodel : DialogViewModel
+public partial class ConfirmDialogViewModel : DialogViewModel
 {
     [ObservableProperty] private string _title = "Confirm";
     [ObservableProperty] private string _message = "Are you sure?";
@@ -21,7 +21,8 @@ public partial class ConfirmDialogViewmodel : DialogViewModel
     {
         Confirmed = true;
         Close();
-    }
+    }   
+    [RelayCommand]
 
     public void Cancel()
     {

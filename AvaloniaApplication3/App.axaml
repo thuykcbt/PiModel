@@ -3,6 +3,7 @@
              xmlns:fluent="avares://Avalonia.Themes.Fluent"
              x:Class="AvaloniaApplication3.App"
              xmlns:local="clr-namespace:AvaloniaApplication3"
+             xmlns:vc ="clr-namespace:AvaloniaApplication3.ValueConverters"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 	<Application.DataTemplates>
@@ -31,6 +32,9 @@
 				<MergeResourceInclude Source="/Controls/ToggleButton.axaml"></MergeResourceInclude>
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
+		
+		<vc:BooleanToBoldFont x:Key="BooleanToBoldFont"/>
+		
 		<SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryBackground">#14172D</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryDisable">#647191</SolidColorBrush>

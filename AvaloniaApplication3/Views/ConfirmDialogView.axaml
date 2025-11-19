@@ -3,13 +3,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaApplication3.ViewModels"
-             x:DataType="vm:ConfirmDialogViewmodel"
+             x:DataType="vm:ConfirmDialogViewModel"
              MinWidth="300"
              Foreground="{DynamicResource PrimaryForeground}"
              Background="{DynamicResource PrimaryBackground}"
              x:Class="AvaloniaApplication3.Views.ConfirmDialogView">
     
-    <Design.DataContext><vm:ConfirmDialogViewmodel></vm:ConfirmDialogViewmodel></Design.DataContext>
+    <Design.DataContext><vm:ConfirmDialogViewModel></vm:ConfirmDialogViewModel></Design.DataContext>
     <!-- Main Dialog Window -->
     <Border Background="{DynamicResource PrimaryBackground}"
             BorderBrush="{DynamicResource DefaultGradient}"
@@ -30,11 +30,21 @@
                            FontSize="20"
                            />
             </Border>
-            <!-- Description -->
+          
             <Border Padding="20">
-                <StackPanel Orientation="Horizontal">
-                    <Label Classes="icon" Content="{Binding IconText}"></Label>
+                <StackPanel Spacing="20">
+                    <!-- Description -->
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="{Binding IconText}"></Label>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Message}"></TextBlock>
+                    </StackPanel>
+                    <!-- Button -->
+                    <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Right">
+                        <Button HorizontalAlignment="Center" MinWidth="50" Classes="alert" Content="{Binding ConfirmText}" Command="{Binding ConfirmCommand}"></Button>
+                        <Button HorizontalAlignment="Center" MinWidth="50" Classes="alert" Content="{Binding CancelText}" Command="{Binding CancelCommand}"></Button>
+                    </StackPanel>
                 </StackPanel>
+               
             </Border>
         </StackPanel>
     </Border>

@@ -51,6 +51,13 @@
 				</Button>
 			</Grid>
 		</Border>
+		<Grid Grid.Column="0" Grid.ColumnSpan="2" IsVisible="{Binding Dialog.IsDialogOpen,FallbackValue=false}">
+			<Border Background="Black" Opacity="0.5" ></Border>
+			<ContentPresenter Content="{Binding Dialog}"
+			                HorizontalAlignment="Center"
+			                VerticalAlignment="Center"
+			                  />
+		</Grid>
 	</Grid>
 	
  

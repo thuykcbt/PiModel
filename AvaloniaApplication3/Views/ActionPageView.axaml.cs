@@ -2,7 +2,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using AvaloniaApplication3.ActionViews;
+using AvaloniaApplication3.Views;
 using AvaloniaApplication3.Data;
 using AvaloniaApplication3.ViewModels;
 
@@ -32,7 +32,7 @@ public partial class ActionPageView : UserControl
 
         var actionTabName = selectedTab switch
         {
-            Print => ApplicationTabActionPage.Print,
+            ActionPrintView => ApplicationTabActionPage.Print,
             _ => ApplicationTabActionPage.Unknown,
         };
         // get view model

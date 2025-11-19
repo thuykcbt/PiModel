@@ -23,6 +23,7 @@
         <entry key="Styles/TextBlockStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Styles/TextBoxStyle.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/ActionPageView.axaml" value="AvaloniaApplication3.csproj" />
+        <entry key="Views/ActionPrintView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/ConfirmDialogView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HistoryPageView.axaml" value="AvaloniaApplication3.csproj" />
         <entry key="Views/HomePageView.axaml" value="AvaloniaApplication3.csproj" />

@@ -3,14 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm = "clr-namespace:AvaloniaApplication3.ViewModels"
-             xmlns:local ="clr-namespace:AvaloniaApplication3.ActionViews"
+             xmlns:local ="clr-namespace:AvaloniaApplication3.Views"
              mc:Ignorable="d" d:DesignWidth="1400" d:DesignHeight="1000"
              Background="{DynamicResource PrimaryBackground}"
              Foreground="{DynamicResource PrimaryForeground}"
              x:DataType="vm:ActionPageViewModel"
              x:Class="AvaloniaApplication3.Views.ActionPageView">
     <Design.DataContext>
-        <vm:SettingPageViewModel></vm:SettingPageViewModel>
+        <vm:ActionPageViewModel></vm:ActionPageViewModel>
     </Design.DataContext>
     <UserControl.Styles>
      
@@ -30,7 +30,7 @@
         <Grid Grid.Row="1" >
             <TabControl Name="ActionTabControl" SelectionChanged="ActionTab_OnSelectionChanged">
                 <TabItem Header="Print" IsSelected="True">
-                   <local:Print></local:Print>
+                   <local:ActionPrintView></local:ActionPrintView>
                 </TabItem>
                 <TabItem Header="Custom Properties">
                     <TextBlock>Tab 2 Control</TextBlock>

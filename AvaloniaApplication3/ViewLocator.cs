@@ -20,5 +20,7 @@ public class ViewLocator : IDataTemplate
        control.DataContext = data;
        return control;
     }
-    public bool Match(object? data)=> data is PageViewModel;
+    public bool Match(object? data){
+        return data != null && data.GetType().Name.EndsWith("ViewModel");
+    }
 }
